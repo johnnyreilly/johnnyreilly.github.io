@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="A starting point for finding John Reilly online.">
+		<title>John Reilly - johnnyreilly</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+        <link rel="alternate icon" href="/favicon.ico">
+		<style>
+			:root {
+				--ink: #17211b;
+				--muted: #5d685f;
+				--paper: #f4f1e9;
+				--line: rgba(23, 33, 27, 0.16);
+				--lime: #d8f36b;
+				--coral: #f17d64;
+			}
+
+			* {
+				box-sizing: border-box;
+			}
+
+			body {
+				margin: 0;
+				min-width: 320px;
+				color: var(--ink);
+				background:
+					radial-gradient(circle at 88% 8%, rgba(216, 243, 107, 0.7), transparent 25rem),
+					linear-gradient(135deg, #f4f1e9 0%, #e8eee2 100%);
+				font-family: "Source Sans 3", Georgia, serif;
+			}
+
+			main {
+				width: min(100% - 3rem, 70rem);
+				min-height: 100vh;
+				margin: 0 auto;
+				padding: clamp(2rem, 7vw, 6rem) 0 3rem;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+
+			header {
+				max-width: 48rem;
+				animation: reveal 700ms ease-out both;
+			}
+
+			h1 {
+				max-width: 11ch;
+				margin: 0;
+				font: 600 clamp(3.75rem, 11vw, 8.5rem)/0.87 "Space Grotesk", sans-serif;
+				letter-spacing: -0.06em;
+			}
+
+			.intro {
+				max-width: 28rem;
+				margin: 2rem 0 0;
+				color: var(--muted);
+				font-size: clamp(1.15rem, 2vw, 1.4rem);
+				line-height: 1.35;
+			}
+
+			.links {
+				margin-top: clamp(4rem, 10vw, 8rem);
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 1rem;
+			}
+
+			.link {
+				min-height: 10rem;
+				padding: 1.5rem;
+				border: 1px solid var(--line);
+				color: var(--ink);
+				background: rgba(255, 255, 255, 0.24);
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				text-decoration: none;
+				transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+			}
+
+			.link:first-child {
+				background: var(--lime);
+			}
+
+			.link:last-child {
+				background: var(--coral);
+			}
+
+			.link:hover,
+			.link:focus-visible {
+				border-color: var(--ink);
+				background: #fffdf7;
+				transform: translateY(-0.35rem);
+			}
+
+			.link-label {
+				font: 600 clamp(1.25rem, 2.5vw, 1.7rem)/1.1 "Space Grotesk", sans-serif;
+			}
+
+			.arrow {
+				align-self: flex-end;
+				font: 400 2.2rem/0.7 "Space Grotesk", sans-serif;
+		}
+
+			footer {
+				margin-top: 1rem;
+				padding-top: 1.25rem;
+				border-top: 1px solid var(--line);
+				color: var(--muted);
+				font-size: 1rem;
+			}
+
+			footer a {
+				color: var(--ink);
+				font-weight: 600;
+			}
+
+			@keyframes reveal {
+				from { opacity: 0; transform: translateY(1rem); }
+				to { opacity: 1; transform: translateY(0); }
+			}
+
+			@media (max-width: 600px) {
+				main {
+					width: min(100% - 2rem, 70rem);
+				}
+
+				.links {
+					grid-template-columns: 1fr;
+				}
+
+				.link {
+					min-height: 8.5rem;
+				}
+			}
+
+			@media (prefers-reduced-motion: reduce) {
+				*, *::before, *::after {
+					animation-duration: 1ms !important;
+					transition-duration: 1ms !important;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<header>
+				<h1>John<br>Reilly</h1>
+				<p class="intro">Writing, building OSS, and occasional stories.</p>
+			</header>
+
+			<nav class="links" aria-label="John Reilly links">
+				<a class="link" href="https://johnnyreilly.com/">
+					<span class="link-label">johnnyreilly.com</span>
+					<span class="arrow" aria-hidden="true">&#8599;</span>
+				</a>
+				<a class="link" href="https://johnnyreilly.github.io/reillys-on-tour/">
+					<span class="link-label">Reilly's on Tour</span>
+					<span class="arrow" aria-hidden="true">&#8599;</span>
+				</a>
+			</nav>
+
+			<footer>
+				<a href="https://johnnyreilly.com/about">More about John Reilly</a>.
+			</footer>
+		</main>
+	</body>
+</html>
